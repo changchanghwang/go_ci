@@ -35,8 +35,4 @@ jobs:
           push: true
           tags: |
             hch950627/ci-test:${{ steps.github_tag.outputs.tag }}
-
-      - name: update latest tag
-        run: |
-          docker tag hch950627/ci-test:${{ steps.github_tag.outputs.tag }} hch950627/ci-test:latest
-          docker push hch950627/ci-test:latest
+            hch950627/ci-test:latest
