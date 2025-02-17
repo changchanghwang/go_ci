@@ -33,6 +33,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: |
             hch950627/ci-test:${{ steps.github_tag.outputs.tag }}
             hch950627/ci-test:latest
