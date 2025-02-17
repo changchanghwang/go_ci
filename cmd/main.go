@@ -8,5 +8,5 @@ import (
 
 func main() {
 	fmt.Println("Hello World")
-	fmt.Println(do.Sum(1, 2))
+	fmt.Println(do.Sum(1, 3))
 }
