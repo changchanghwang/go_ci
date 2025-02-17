@@ -14,4 +14,6 @@ jobs:
 
       - name: get tag
         id: get_tag
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+        run: |
+          TAG=${GITHUB_REF#refs/tags/}
+          echo "tag=${TAG}" >> $GITHUB_OUTPUT
