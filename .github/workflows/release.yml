@@ -37,3 +37,10 @@ jobs:
           tags: |
             hch950627/ci-test:${{ steps.github_tag.outputs.tag }}
             hch950627/ci-test:latest
+      - name: Sync README to Docker Hub
+        uses: peter-evans/dockerhub-description@v4
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: hch950627/ci-test
+          readme-filepath: ./README.md
